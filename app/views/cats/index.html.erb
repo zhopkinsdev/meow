@@ -1,1 +1,8 @@
-<h1>Welcome to my Awesome Web App</h1>
+<% @cat.each do |cat| %>
+  <div>
+    <h1><%= cat.name %></h1><br />
+    <p><%= cat.description %></p><br />
+  </div>
+
+  </hr >
+<% end %>
