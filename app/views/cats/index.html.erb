@@ -4,7 +4,7 @@
     <p><%= cat.description %></p><br />
 
     <%= will_paginate @cat %>
-  </div>
+  
 
    <% if @cat.previous_page %>
     <%= link_to "< Previous", params.merge(page: @cat.previous_page) %>
@@ -14,5 +14,9 @@
     <%= link_to "Next >", params.merge(page: @cat.next_page) %>
     <% end %>
 
-  </hr >
+    <% if place.user.present? %>
+      <small><%= place.user.email %></small>
+    <% end %>
+
+  </div >
 <% end %>

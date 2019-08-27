@@ -11,7 +11,7 @@ class CatsController < ApplicationController
   end
 
   def create
-    Cat.create(cat_params)
+    current_user.cat.create(cat_params)
     redirect_to root_path
   end
 
