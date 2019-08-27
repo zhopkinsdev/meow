@@ -70,3 +70,4 @@ end
 ## Gemfile for Rails 3+, Sinatra, and Merb
 gem 'simple_form'
 gem 'bootstrap', '4.0.0.alpha6'
+gem 'will_paginate', '~> 3.1.0'

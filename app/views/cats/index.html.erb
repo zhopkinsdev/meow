@@ -2,7 +2,17 @@
   <div class="booyah-box" col-10 offset-1">
     <h1><%= cat.name %></h1><br />
     <p><%= cat.description %></p><br />
+
+    <%= will_paginate @cat %>
   </div>
+
+   <% if @cat.previous_page %>
+    <%= link_to "< Previous", params.merge(page: @cat.previous_page) %>
+    <% end %>
+  Page <%= @cat.current_page %> of <%= @cat.total_pages %>
+    <% if @cat.next_page %>
+    <%= link_to "Next >", params.merge(page: @cat.next_page) %>
+    <% end %>
 
   </hr >
 <% end %>
