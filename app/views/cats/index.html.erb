@@ -14,8 +14,8 @@
     <%= link_to "Next >", params.merge(page: @cat.next_page) %>
     <% end %>
 
-    <% if place.user.present? %>
-      <small><%= place.user.email %></small>
+    <% if cat.user.present? %>
+      <small><%= cat.user.email %></small>
     <% end %>
 
   </div >
