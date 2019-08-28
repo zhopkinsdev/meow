@@ -14,7 +14,7 @@ class CatsController < ApplicationController
     @cat = current_user.cat.create(cat_params)
     if @cat.valid?
       redirect_to root_path
-        else
+    else
       render :new, status: :unprocessable_entity
     end
   end
@@ -29,30 +29,22 @@ class CatsController < ApplicationController
     @cat = Cat.find(params[:id])
 
     if @cat.user != current_user
-      return render plain: 'Paws Off!', status :forbidden
+      return render plain: 'Not Allowed', status :forbidden
     end
   end
 
   def update
     @cat = Cat.find(params[:id])
     if @cat.user != current_user
-      return render plain: 'Paws Off!', status :forbidden
-    end
-
-    @cat.update_attributes(cat_params)
-    if @cat.valid?
-      redirect_to root_path
-        else
-      render :new, status: :unprocessable_entity
+      return render plain: 'Not Allowed', status :forbidden
     end
   end
 
   def destroy
     @cat = Cat.find(params[:id])
     if @cat.user != current_user
-      return render plain: 'Paws Off!', status :forbidden
+      return render plain: 'Not Allowed', status :forbidden
     end
-
     @cat.destroy
     redirect_to root_path
   end
