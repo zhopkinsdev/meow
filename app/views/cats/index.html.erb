@@ -1,5 +1,5 @@
 <% @cat.each do |cat| %>
-  <div class="booyah-box" col-10 offset-1">
+  <div class="booyah-box col-10 offset-1">
     <h1><%= link_to cat.name, cat_path(cat) %></h1><br />
     <p><%= cat.description %></p><br />
 
@@ -29,3 +29,7 @@
         </blockquote>
       </div>
     <% end %>
+
+  </div>
+  <hr />
+  <% end %>
