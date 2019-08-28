@@ -4,17 +4,14 @@
 @import url('https://fonts.googleapis.com/css?family=Overlock:400,700&display=swap');
 
 .navbar-inverse .navbar-brand {
-  color: #FFF5EE;
-  font-weight: 600;
-  letter-spacing: -0.3px;
+  color: #FFB682;
   font-family: 'Pathway Gothic One', sans-serif;
-
 }
 
 .navbar {
- 
   box-shadow: 0px 1px 3px #2a2a2a;
   margin-bottom: 0;
+  background: image_url('tree_bark.png');
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,6 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
+  color: #FBBBB9;
 }
 
 .booyah-box h2, .booyah-box h1 {
@@ -47,4 +45,9 @@ body {
 
 .fas {
   color: #ECC5C0
+}
+
+.btn {
+  font-family: 'Overlock', cursive;
+  color: #FFFFCC;
 }
