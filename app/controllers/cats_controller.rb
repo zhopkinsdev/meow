@@ -21,6 +21,8 @@ class CatsController < ApplicationController
 
   def show
     @cat = Cat.find(params[:id])
+    @comment = Comment.new
+    @photo =Photo.new
   end
 
   def edit

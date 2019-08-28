@@ -18,5 +18,14 @@
       <small><%= cat.user.email %></small>
     <% end %>
 
-  </div >
-<% end %>
+    <% if place.comments.present? %>  
+      <div class="col-12">
+        <blockquote>
+          <% if comment.humanized_rating.present? %>
+            <b><%= cat.comment.last.humanized_rating %></b> -
+          <% end %>
+            <%= cat.comments.last.message %>
+            <small><%= cat.comments.last.user.email %></small>
+        </blockquote>
+      </div>
+    <% end %>
