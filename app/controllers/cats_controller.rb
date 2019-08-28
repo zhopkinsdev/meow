@@ -29,21 +29,21 @@ class CatsController < ApplicationController
     @cat = Cat.find(params[:id])
 
     if @cat.user != current_user
-      return render plain: 'Not Allowed', status :forbidden
+      return render plain: 'Not Allowed', status: :forbidden
     end
   end
 
   def update
     @cat = Cat.find(params[:id])
     if @cat.user != current_user
-      return render plain: 'Not Allowed', status :forbidden
+      return render plain: 'Not Allowed', status: :forbidden
     end
   end
 
   def destroy
     @cat = Cat.find(params[:id])
     if @cat.user != current_user
-      return render plain: 'Not Allowed', status :forbidden
+      return render plain: 'Not Allowed', status: :forbidden
     end
     @cat.destroy
     redirect_to root_path
