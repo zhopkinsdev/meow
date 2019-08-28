@@ -4,7 +4,6 @@ class Comment < ApplicationRecord
   after_create :send_comment_email
 
   RATINGS = {
-    'zero star': 'not_even_a_cat'
     'one star': '1_star',
     'two stars': '2_stars',
     'three stars': '3_stars',
